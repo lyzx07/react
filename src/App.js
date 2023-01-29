@@ -9,32 +9,32 @@ function App() {
     {
       name: "Caleb",
       role: "Developer",
-      img: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg",
+      img: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
     },
     {
-      name: "Caleb",
+      name: "Sally",
       role: "Manager",
-      img: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg",
+      img: "https://images.pexels.com/photos/3586798/pexels-photo-3586798.jpeg",
     },
     {
-      name: "Caleb",
+      name: "Christopher",
       role: "Intern",
-      img: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg",
+      img: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
     },
     {
-      name: "Caleb",
+      name: "Wanda",
       role: "Wannabe",
       img: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg",
     },
     {
-      name: "Caleb",
+      name: "Bobby",
       role: "Ceo",
-      img: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg",
+      img: "https://images.pexels.com/photos/1139743/pexels-photo-1139743.jpeg",
     },
     {
-      name: "Caleb",
+      name: "Corey",
       role: "New Hire",
-      img: "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg",
+      img: "https://images.pexels.com/photos/2380795/pexels-photo-2380795.jpeg",
     },
   ]);
   const showEmployees = true;
