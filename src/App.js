@@ -2,6 +2,7 @@ import "./index.css";
 import Employee from "./components/Employee";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import AddEmployee from "./components/AddEmployee";
 
 function App() {
   const [role, setRole] = useState("dev");
@@ -55,36 +56,49 @@ function App() {
     setEmployees(updatedEmployee);
   }
 
+  function newEmployee(name, role, img) {
+    const newEmployee = {
+      id: uuidv4(),
+      name: name,
+      role: role,
+      img: img,
+    };
+    setEmployees([...employees, newEmployee]);
+  }
+
   const showEmployees = true;
   return (
-    <div className="App">
-      {showEmployees ? (
-        <>
-          <input
-            type="text"
-            onChange={(e) => {
-              setRole(e.target.value);
-            }}
-          />
-          <div className="flex flex-wrap justify-center">
-            {employees.map((employee) => {
-              return (
-                <Employee
-                  key={employee.id}
-                  id={employee.id}
-                  name={employee.name}
-                  role={employee.role}
-                  img={employee.img}
-                  updateEmployee={updateEmployee}
-                />
-              );
-            })}
-          </div>
-        </>
-      ) : (
-        <p>you can not see the employees</p>
-      )}
-    </div>
+    <>
+      <div className="App">
+        {showEmployees ? (
+          <>
+            <input
+              type="text"
+              onChange={(e) => {
+                setRole(e.target.value);
+              }}
+            />
+            <div className="flex flex-wrap justify-center">
+              {employees.map((employee) => {
+                return (
+                  <Employee
+                    key={employee.id}
+                    id={employee.id}
+                    name={employee.name}
+                    role={employee.role}
+                    img={employee.img}
+                    updateEmployee={updateEmployee}
+                  />
+                );
+              })}
+            </div>
+          </>
+        ) : (
+          <p>you can not see the employees</p>
+        )}
+      </div>
+      <AddEmployee newEmployee={newEmployee} />
+    </>
   );
 }
 
