@@ -1,3 +1,3 @@
 export default function Customers() {
-    return <h1>Hiya Fellas</h1>
+    return <img src="https://images.pexels.com/photos/3586798/pexels-photo-3586798.jpeg" alt="face"></img>
 }
